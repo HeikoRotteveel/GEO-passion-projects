@@ -199,7 +199,7 @@ def add_azimuth(isoline):
         ax, ay, az = line_segment[0]
         bx, by, bz = line_segment[1]
         Two_PI = math.pi * 2
-        theta = math.atan2(bx - ax, ay - by)
+        theta = math.atan2(ay - by, bx - ax)
         if theta < 0.0:
             theta += Two_PI
         line_segment.append(math.degrees(theta))
